@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/stuffIwannaAddForFun-SIWAFF.main.iml" filepath="$PROJECT_DIR$/.idea/modules/stuffIwannaAddForFun-SIWAFF.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/stuffIwannaAddForFun-SIWAFF.test.iml" filepath="$PROJECT_DIR$/.idea/modules/stuffIwannaAddForFun-SIWAFF.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/stuffIwannaAddForFun-SIWAFF_-_Copy.main.iml" filepath="$PROJECT_DIR$/.idea/modules/stuffIwannaAddForFun-SIWAFF_-_Copy.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/stuffIwannaAddForFun-SIWAFF_-_Copy.test.iml" filepath="$PROJECT_DIR$/.idea/modules/stuffIwannaAddForFun-SIWAFF_-_Copy.test.iml" />
+    </modules>
+  </component>
+</project>
