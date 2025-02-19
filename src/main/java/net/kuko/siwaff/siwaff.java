@@ -1,6 +1,8 @@
 package net.kuko.siwaff;
 
 import com.mojang.logging.LogUtils;
+import net.kuko.siwaff.item.creativeTabs;
+import net.kuko.siwaff.item.items;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
@@ -20,11 +22,16 @@ public class siwaff
 {
     // Define mod id in a common place for everything to reference
     public static final String MOD_ID = "siwaff";
+    public static final String ownSuffix = "SIWAFF";
     // Directly reference a slf4j logger
     private static final Logger LOGGER = LogUtils.getLogger();
     public siwaff()
     {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
+
+        items.register(modEventBus);
+        creativeTabs.register(modEventBus);
+
 
         // Register the commonSetup method for modloading
         modEventBus.addListener(this::commonSetup);
