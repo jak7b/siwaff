@@ -17,15 +17,15 @@ import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import org.slf4j.Logger;
 
 // The value here should match an entry in the META-INF/mods.toml file
-@Mod(siwaff.MOD_ID)
-public class siwaff
+@Mod(main.MOD_ID)
+public class main
 {
     // Define mod id in a common place for everything to reference
     public static final String MOD_ID = "siwaff";
     public static final String ownSuffix = "SIWAFF";
     // Directly reference a slf4j logger
     private static final Logger LOGGER = LogUtils.getLogger();
-    public siwaff()
+    public main()
     {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
 

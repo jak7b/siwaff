@@ -1,6 +1,6 @@
 package net.kuko.siwaff.item;
 
-import net.kuko.siwaff.siwaff;
+import net.kuko.siwaff.main;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.CreativeModeTab;
@@ -12,19 +12,19 @@ import net.minecraftforge.registries.RegistryObject;
 
 public class creativeTabs {
     public static final DeferredRegister<CreativeModeTab> CREATIVE_MODE_TABS =
-            DeferredRegister.create(Registries.CREATIVE_MODE_TAB, siwaff.MOD_ID);
+            DeferredRegister.create(Registries.CREATIVE_MODE_TAB, main.MOD_ID);
 
     public static final RegistryObject<CreativeModeTab> RANDOM_STUFF = CREATIVE_MODE_TABS.register("random_stuff",
-            () -> CreativeModeTab.builder() .icon(()-> new ItemStack(items.WIFF.get()))
-                    .title(Component.literal("Random Stuffik"+" - " + siwaff.ownSuffix))
+            () -> CreativeModeTab.builder() .icon(()-> new ItemStack(Items.BARRIER))
+                    .title(Component.literal("Random Stuffik"+" - " + main.ownSuffix))
                     .displayItems((itemDisplayParameters, output) ->
-                            output.accept(items.WIFF.get()
+                            output.accept(Items.BARRIER)
 
-                            )).build());
+                            )).build();
 
     public static final RegistryObject<CreativeModeTab> IDEAS = CREATIVE_MODE_TABS.register("ideas",
             ()-> CreativeModeTab.builder().icon(() -> new ItemStack(Items.BARRIER))
-                    .title(Component.literal("Ideas"+" - "+siwaff.ownSuffix))
+                    .title(Component.literal("Ideas"+" - " + main.ownSuffix))
                     .displayItems((itemDisplayParameters, output) ->
                                     output.accept(Items.BARRIER)
                             )
