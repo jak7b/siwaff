@@ -13,14 +13,14 @@ import net.minecraftforge.registries.RegistryObject;
 public class creativeTabs {
     public static final DeferredRegister<CreativeModeTab> CREATIVE_MODE_TABS =
             DeferredRegister.create(Registries.CREATIVE_MODE_TAB, main.MOD_ID);
-
-    public static final RegistryObject<CreativeModeTab> RANDOM_STUFF = CREATIVE_MODE_TABS.register("random_stuff",
-            () -> CreativeModeTab.builder() .icon(()-> new ItemStack(Items.BARRIER))
-                    .title(Component.literal("Random Stuffik"+" - " + main.ownSuffix))
-                    .displayItems((itemDisplayParameters, output) ->
-                            output.accept(Items.BARRIER)
-
-                            )).build();
+//
+//    public static final RegistryObject<CreativeModeTab> RANDOM_STUFF = CREATIVE_MODE_TABS.register("random_stuff",
+//            () -> CreativeModeTab.builder() .icon(()-> new ItemStack(Items.BARRIER))
+//                    .title(Component.literal("Random Stuffik"+" - " + main.ownSuffix))
+//                    .displayItems((itemDisplayParameters, output) ->
+//                            output.accept(Items.BARRIER)
+//
+//                            )).build();
 
     public static final RegistryObject<CreativeModeTab> IDEAS = CREATIVE_MODE_TABS.register("ideas",
             ()-> CreativeModeTab.builder().icon(() -> new ItemStack(Items.BARRIER))
