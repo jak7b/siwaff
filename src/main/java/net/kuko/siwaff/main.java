@@ -1,6 +1,7 @@
 package net.kuko.siwaff;
 
 import com.mojang.logging.LogUtils;
+import net.kuko.siwaff.block.blocks;
 import net.kuko.siwaff.item.creativeTabs;
 import net.kuko.siwaff.item.items;
 import net.minecraft.world.item.CreativeModeTabs;
@@ -27,8 +28,13 @@ public class main
     private static final Logger LOGGER = LogUtils.getLogger();
     public main()
     {
+
+        //Do to: Spratka urob Lightsaber (Cerveny) a Star wars Gun a entity a energy system magik
+        // light shaper givs bleeding, fire, Sphunky? Ithink?
+
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
+        blocks.register(modEventBus);
         items.register(modEventBus);
         creativeTabs.register(modEventBus);
 

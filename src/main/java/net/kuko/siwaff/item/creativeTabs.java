@@ -1,5 +1,6 @@
 package net.kuko.siwaff.item;
 
+import net.kuko.siwaff.block.blocks;
 import net.kuko.siwaff.main;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
@@ -13,22 +14,28 @@ import net.minecraftforge.registries.RegistryObject;
 public class creativeTabs {
     public static final DeferredRegister<CreativeModeTab> CREATIVE_MODE_TABS =
             DeferredRegister.create(Registries.CREATIVE_MODE_TAB, main.MOD_ID);
-//
-//    public static final RegistryObject<CreativeModeTab> RANDOM_STUFF = CREATIVE_MODE_TABS.register("random_stuff",
-//            () -> CreativeModeTab.builder() .icon(()-> new ItemStack(Items.BARRIER))
-//                    .title(Component.literal("Random Stuffik"+" - " + main.ownSuffix))
-//                    .displayItems((itemDisplayParameters, output) ->
-//                            output.accept(Items.BARRIER)
-//
-//                            )).build();
 
-    public static final RegistryObject<CreativeModeTab> IDEAS = CREATIVE_MODE_TABS.register("ideas",
-            ()-> CreativeModeTab.builder().icon(() -> new ItemStack(Items.BARRIER))
-                    .title(Component.literal("Ideas"+" - " + main.ownSuffix))
-                    .displayItems((itemDisplayParameters, output) ->
-                                    output.accept(Items.BARRIER)
-                            )
+    public static final RegistryObject<CreativeModeTab> ITEMS = CREATIVE_MODE_TABS.register("item_tab",
+            () -> CreativeModeTab.builder().icon(() -> new ItemStack(items.FRIED_EGG.get()))
+                    .title(Component.literal("Items - siwaff"))
+                    .displayItems((pParameters, pOutput) -> {
+
+                        pOutput.accept(items.FRIED_EGG.get());
+                        pOutput.accept(items.LIGHT_RED.get());
+
+                    })
                     .build());
+
+    public static final RegistryObject<CreativeModeTab> BLOCKS = CREATIVE_MODE_TABS.register("block_tab",
+            () -> CreativeModeTab.builder().icon(() -> new ItemStack(blocks.NUKE.get()))
+                    .title(Component.literal("Blocks - siwaff"))
+                    .displayItems((pParameters, pOutput) -> {
+
+                        pOutput.accept(blocks.NUKE.get());
+
+                    })
+                    .build());
+
 
     public static void register(IEventBus eventBus){
         CREATIVE_MODE_TABS.register(eventBus);

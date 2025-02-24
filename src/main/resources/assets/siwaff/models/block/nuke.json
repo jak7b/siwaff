@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/cube_bottom_top",
+  "textures": {
+    "bottom": "siwaff:block/nuke_buttom",
+    "side": "siwaff:block/nuke_sides",
+    "top": "siwaff:block/nuke_top"
+  }
+}
